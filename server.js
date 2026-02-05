@@ -9,6 +9,11 @@ app.use(express.json());
 
 const DATA_FILE = "./roles.json";
 
+app.get("/", (req, res) => {
+  res.send("Apprenticeship Alert API is running ✅");
+});
+
+
 // 🔐 Discord webhook stored as ENV variable
 const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK;
 
